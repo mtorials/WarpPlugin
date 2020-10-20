@@ -81,7 +81,7 @@ public class WarpCommand implements CommandExecutor, TabCompleter {
             Warp warpLocation = warpManager.getWarp(plugin.getConfig().getString("world_name"), args[0]) != null ?
                     warpManager.getWarp(plugin.getConfig().getString("world_name"), args[0]) : warpManager.getWarp(offlinePlayer, args[0]);
 
-            if (warpLocation.warpToLocation() == null) {
+            if (warpLocation == null) {
                 player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_not_exist").replace("<warp>", args[0])));
                 return false;
             }
@@ -94,8 +94,10 @@ public class WarpCommand implements CommandExecutor, TabCompleter {
                 } else {
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_error_xp").replace("<xp_cost>", Integer.toString(plugin.getConfig().getInt("warp_xp_level_cost")))));
                 }
+                return false;
             } else {
                 player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_error_interdimension")));
+                return false;
             }
 
         // Set and remove

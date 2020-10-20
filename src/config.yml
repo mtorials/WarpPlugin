@@ -18,7 +18,7 @@ warp_error_interdimension: "&cInterdimensional travel is not allowed!"
 warp_not_exist: "&cThe <warp> warp does not exist!"
 
 # /warp help message:
-help: "&6Warp Command Help\n\n/warp <name> &e- Warp to a location\n&6/warp <set/set:world> <name> &e- Set current location as a warp with custom name\n&6/warp <remove:rm> <name> &e- Remove the warp location\n&6/warp list &e- List the allowed warps\n&6/warp help &e- Get help with the warp commands\n"
+help: "&6Warp Command Help\n\n/warp <name> &e- Warp to a location\n&6/warp <set/set:world> <name> [delay in ticks] &e- Set current location as a warp with custom name and optional delay \n&6/warp <remove:rm> <name> &e- Remove the warp location\n&6/warp list &e- List the allowed warps\n&6/warp help &e- Get help with the warp commands\n"
 
 # /warp list message:
 no_warps: "&cThere are no current warps to list!"

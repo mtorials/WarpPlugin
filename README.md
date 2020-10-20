@@ -11,7 +11,7 @@ A custom plugin for teleports
 
 ## Usage:
 * `/warp <name>` - Warp to a set location for 500 xp
-* `/warp set <name>` - Create a custom player-specific named warp
+* `/warp set <name> <delay in ticks>` - Create a custom player-specific named warp and delay
 * `/warp set:world <name>` - Create a custom named world warp (anyone can use this)
 * `/warp remove <name>` - Remove a named warp
 * `/warp list` - List the warps accessible by the player
