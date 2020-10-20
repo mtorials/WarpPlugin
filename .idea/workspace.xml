@@ -5,8 +5,13 @@
       <artifact name="WarpPlugin:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="15838f6d-5d70-4ff6-8051-fd89579a3901" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/commands/DelayTeleport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/WarpPlugin_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/WarpPlugin_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/commands/WarpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/commands/WarpCommand.java" afterDir="false" />
     </list>
@@ -31,17 +36,23 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/spigot-1.16.3.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -59,6 +70,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -70,56 +82,65 @@
       <option name="presentableId" value="Default" />
       <updated>1584896227042</updated>
     </task>
+    <task id="LOCAL-00001" summary="code refactoring">
+      <created>1603203658826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603203658826</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="code refractoring" />
+    <MESSAGE value="code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="code refactoring" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="130" y="180" width="1081" height="735" key="#Project_Structure" timestamp="1585021796452">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="765" y="231" key="#com.intellij.ide.util.MemberChooser" timestamp="1603203702576">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="130" y="180" width="1081" height="735" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1585021796452" />
-    <state x="327" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1585256129949">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="765" y="231" key="#com.intellij.ide.util.MemberChooser/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603203702576" />
+    <state x="681" y="214" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1603200721801">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="327" y="256" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1585256129949" />
-    <state x="252" y="330" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584909744525">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="681" y="214" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603200721801" />
+    <state x="587" y="94" key="CommitChangelistDialog2" timestamp="1603203657364">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="252" y="330" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584909744525" />
-    <state x="376" y="294" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584899905574">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="587" y="94" key="CommitChangelistDialog2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603203657364" />
+    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1603200825376">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="376" y="294" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584899905574" />
-    <state width="1234" height="297" key="GridCell.Tab.0.bottom" timestamp="1585007618529">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="740" y="266" key="FileChooserDialogImpl/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603200825376" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1603201010895">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1234" height="297" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1585007618529" />
-    <state width="1234" height="297" key="GridCell.Tab.0.center" timestamp="1585007618453">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603201010895" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1603201010894">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1234" height="297" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1585007618453" />
-    <state width="1234" height="297" key="GridCell.Tab.0.left" timestamp="1585007618451">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603201010894" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1603201010894">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1234" height="297" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1585007618451" />
-    <state width="1234" height="297" key="GridCell.Tab.0.right" timestamp="1585007618453">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603201010894" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1603201010894">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1234" height="297" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1585007618453" />
-    <state x="279" y="243" key="SettingsEditor" timestamp="1585267774881">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603201010894" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1603200831866">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="279" y="243" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1585267774881" />
-    <state x="639" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1585071512604">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="440" y="99" key="SettingsEditor/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603200831866" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603203670425">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="639" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585071512604" />
-    <state x="304" y="175" width="667" height="729" key="find.popup" timestamp="1584897983859">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603203670425" />
+    <state x="664" y="334" width="591" height="287" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603200477743">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="304" y="175" width="667" height="729" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584897983859" />
-    <state x="303" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1584904967722">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="303" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584904967722" />
+    <state x="664" y="334" width="591" height="287" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603200477743" />
   </component>
 </project>

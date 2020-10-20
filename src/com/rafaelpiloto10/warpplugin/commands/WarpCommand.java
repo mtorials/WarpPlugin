@@ -88,7 +88,7 @@ public class WarpCommand implements CommandExecutor, TabCompleter {
             if (player.getWorld().getName().equals(warpLocation.getWorld().getName()) || plugin.getConfig().getBoolean("allowed_interdimensional_travel")) {
                 if (player.getLevel() >= plugin.getConfig().getInt("warp_xp_level_cost")) {
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_success").replace("<warp>", args[0])));
-                    player.teleport(warpLocation);
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new DelayTeleport(player, warpLocation), 40);
                     player.setLevel(player.getLevel() - plugin.getConfig().getInt("warp_xp_level_cost"));
                 } else {
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_error_xp").replace("<xp_cost>", Integer.toString(plugin.getConfig().getInt("warp_xp_level_cost")))));
