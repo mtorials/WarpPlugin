@@ -9,15 +9,27 @@ public class Warp implements Serializable {
     public String name;
     public String owner;
     public String world;
+    public long delay;
     public int x, y, z;
 
-    public Warp(String owner, String name, String world, int x, int y, int z){
+    public Warp(String owner, String name, String world, int x, int y, int z, long delay) {
         this.owner = owner;
         this.name = name;
         this.world = world;
         this.x = x;
         this.y = y;
         this.z = z;
+        this.delay = delay;
+    }
+
+    public Warp(String owner, String name, String world, int x, int y, int z) {
+        this.owner = owner;
+        this.name = name;
+        this.world = world;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.delay = 0;
     }
 
     public Location warpToLocation(){

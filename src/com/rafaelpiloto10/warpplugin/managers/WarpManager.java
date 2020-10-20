@@ -81,10 +81,14 @@ public class WarpManager {
     }
 
     public void setWarp(OfflinePlayer player, String name, Location warp) {
-        setWarp(player.getUniqueId().toString(), name, warp);
+        setWarp(player.getUniqueId().toString(), name, warp, 0);
     }
 
-    public void setWarp(String branch, String name, Location warp) {
+    public void setWarp(OfflinePlayer player, String name, Location warp, long delay) {
+        setWarp(player.getUniqueId().toString(), name, warp, delay);
+    }
+
+    public void setWarp(String branch, String name, Location warp, long delay) {
         HashMap<String, Warp> playerSavedWarps = warps.get(branch);
 
         if (playerSavedWarps == null) {
@@ -92,7 +96,7 @@ public class WarpManager {
             playerSavedWarps = warps.get(branch);
         }
 
-        playerSavedWarps.put(name, new Warp(branch, name, warp.getWorld().getName(), warp.getBlockX(), warp.getBlockY(), warp.getBlockZ()));
+        playerSavedWarps.put(name, new Warp(branch, name, warp.getWorld().getName(), warp.getBlockX(), warp.getBlockY(), warp.getBlockZ(), delay));
         warps.put(branch, playerSavedWarps);
     }
 
@@ -123,16 +127,16 @@ public class WarpManager {
         }
     }
 
-    public Location getWarpLocation(OfflinePlayer p, String name) {
-        return getWarpLocation(p.getUniqueId().toString(), name);
+    public Warp getWarp(OfflinePlayer p, String name) {
+        return getWarp(p.getUniqueId().toString(), name);
     }
 
-    public Location getWarpLocation(String branch, String name) {
+    public Warp getWarp(String branch, String name) {
         try {
             if (warps.get(branch) == null) {
                 warps.put(branch, new HashMap<String, Warp>());
             }
-            return warps.get(branch).get(name).warpToLocation();
+            return warps.get(branch).get(name);
         } catch (NullPointerException e){
             return null;
         }

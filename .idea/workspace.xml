@@ -10,10 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15838f6d-5d70-4ff6-8051-fd89579a3901" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/commands/DelayTeleport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/WarpPlugin_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/WarpPlugin_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/commands/WarpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/commands/WarpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/managers/WarpManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/managers/WarpManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/utils/Warp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rafaelpiloto10/warpplugin/utils/Warp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603203658826</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Delayed Tepelports">
+      <created>1603208586667</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603208586667</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="code refractoring" />
     <MESSAGE value="code refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="code refactoring" />
+    <MESSAGE value="Delayed Tepelports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delayed Tepelports" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="231" key="#com.intellij.ide.util.MemberChooser" timestamp="1603203702576">
@@ -106,10 +114,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="681" y="214" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603200721801" />
-    <state x="587" y="94" key="CommitChangelistDialog2" timestamp="1603203657364">
+    <state x="587" y="94" key="CommitChangelistDialog2" timestamp="1603208585757">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="587" y="94" key="CommitChangelistDialog2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603203657364" />
+    <state x="587" y="94" key="CommitChangelistDialog2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603208585757" />
     <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1603200825376">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -142,5 +150,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="664" y="334" width="591" height="287" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603200477743" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1603209143973">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603209143973" />
   </component>
 </project>

@@ -4,6 +4,7 @@ import com.google.common.collect.ObjectArrays;
 import com.rafaelpiloto10.warpplugin.Main;
 import com.rafaelpiloto10.warpplugin.managers.WarpManager;
 import com.rafaelpiloto10.warpplugin.utils.Utils;
+import com.rafaelpiloto10.warpplugin.utils.Warp;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
@@ -73,22 +74,22 @@ public class WarpCommand implements CommandExecutor, TabCompleter {
             }
         }
 
-        // /warp location_name
-        Location warpLocation = warpManager.getWarpLocation(plugin.getConfig().getString("world_name"), args[0]) != null ?
-                warpManager.getWarpLocation(plugin.getConfig().getString("world_name"), args[0]) : warpManager.getWarpLocation(offlinePlayer, args[0]);
-
         // Teleport
         if (args.length == 1) {
 
-            if (warpLocation == null) {
+            // /warp location_name
+            Warp warpLocation = warpManager.getWarp(plugin.getConfig().getString("world_name"), args[0]) != null ?
+                    warpManager.getWarp(plugin.getConfig().getString("world_name"), args[0]) : warpManager.getWarp(offlinePlayer, args[0]);
+
+            if (warpLocation.warpToLocation() == null) {
                 player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_not_exist").replace("<warp>", args[0])));
                 return false;
             }
 
-            if (player.getWorld().getName().equals(warpLocation.getWorld().getName()) || plugin.getConfig().getBoolean("allowed_interdimensional_travel")) {
+            if (player.getWorld().getName().equals(warpLocation.warpToLocation().getWorld().getName()) || plugin.getConfig().getBoolean("allowed_interdimensional_travel")) {
                 if (player.getLevel() >= plugin.getConfig().getInt("warp_xp_level_cost")) {
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_success").replace("<warp>", args[0])));
-                    Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new DelayTeleport(player, warpLocation), 40);
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, new DelayTeleport(player, warpLocation.warpToLocation()), warpLocation.delay);
                     player.setLevel(player.getLevel() - plugin.getConfig().getInt("warp_xp_level_cost"));
                 } else {
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_error_xp").replace("<xp_cost>", Integer.toString(plugin.getConfig().getInt("warp_xp_level_cost")))));
@@ -98,10 +99,12 @@ public class WarpCommand implements CommandExecutor, TabCompleter {
             }
 
         // Set and remove
-        } else if (args.length == 2) {
+        } else if (args.length == 2 || args.length == 3) {
 
+            // Set
             if (args[0].equalsIgnoreCase("set")) {
-                // /warp set location_name
+                // /warp set location_name [delay]
+
                 for (String world_warps : warpManager.getWarps(plugin.getConfig().getString("world_name"))) {
                     if (world_warps.equalsIgnoreCase(args[1])) {
                         player.sendMessage(Utils.chat(plugin.getConfig().getString("warp_exists").replace("<warp>", args[1])));
@@ -119,18 +122,25 @@ public class WarpCommand implements CommandExecutor, TabCompleter {
                     return false;
                 }
 
-                warpManager.setWarp(offlinePlayer, args[1], player.getLocation());
+                if (args.length == 3) {
+                    long delay = Long.parseLong(args[2]);
+                    warpManager.setWarp(offlinePlayer, args[1], player.getLocation(), delay);
+                } else {
+                    warpManager.setWarp(offlinePlayer, args[1], player.getLocation());
+                }
+
                 player.sendMessage(Utils.chat(plugin.getConfig().getString("set_new_warp").replace("<warp>", args[1])));
 
+            // set:world
             } else if (args[0].equalsIgnoreCase("set:world")) {
                 // /warp set:world location_name
                 if (player.hasPermission("warpplugin.set_world")) {
-                    warpManager.setWarp(plugin.getConfig().getString("world_name"), args[1], player.getLocation());
+                    warpManager.setWarp(plugin.getConfig().getString("world_name"), args[1], player.getLocation(), 0);
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("set_new_warp").replace("<warp>", args[1])));
                     Bukkit.broadcastMessage(Utils.chat(plugin.getConfig().getString("world_warp_announcement").replace("<warp>", args[1])));
                 } else
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("no_perms")));
-            } else if (args[0].equalsIgnoreCase("remove") || args[0].equalsIgnoreCase("rm")) {
+                } else if (args[0].equalsIgnoreCase("remove") || args[0].equalsIgnoreCase("rm")) {
                 if (warpManager.removeWarp(offlinePlayer, args[1])) {
                     player.sendMessage(Utils.chat(plugin.getConfig().getString("remove_success").replace("<warp>", args[1])));
                     return false;
@@ -145,7 +155,7 @@ public class WarpCommand implements CommandExecutor, TabCompleter {
                 player.sendMessage(Utils.chat(plugin.getConfig().getString("no_parse")));
             }
         } else {
-            // Not correct command syntax
+            // Wrong command syntax
             player.sendMessage(Utils.chat(plugin.getConfig().getString("no_parse")));
         }
         return false;
